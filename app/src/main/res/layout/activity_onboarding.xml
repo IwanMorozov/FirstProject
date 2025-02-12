@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_App"
+    android:id="@+id/onboarding">
+
+    <ImageView
+    android:id="@+id/image"
+    android:layout_width="0dp"
+    android:layout_height="454dp"
+    android:contentDescription="@string/app_name"
+    app:srcCompat="@drawable/ic_one"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="19sp"
+        android:paddingRight="19sp"
+        android:text="@string/step_into_the_world_of_films_with_movievault"
+        android:textColor="@color/textColor"
+        android:textSize="38sp"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="19sp"
+        android:paddingRight="19sp"
+        android:paddingTop="10sp"
+        android:text="@string/String2"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        android:fontFamily="@font/plus_jakarta_sans"
+        app:layout_constraintTop_toBottomOf="@id/textView1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="420dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/ic_custom_button"
+        android:fontFamily="@font/plus_jakarta_sans_extrabold"
+        android:text="@string/get_started"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintButtonSize,VisualLintBounds" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

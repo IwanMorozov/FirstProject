@@ -2,5 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="FigmaProg1">#F57826</color>
+    <color name="figmaButton">#F57826</color>
+    <color name="textColor">#1C120D</color>
+    <color name="background_App">#FCFAF7</color>
 </resources>

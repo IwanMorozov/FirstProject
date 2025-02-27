@@ -16,14 +16,15 @@
     app:srcCompat="@drawable/ic_one"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent" />
+    app:layout_constraintEnd_toEndOf="parent"
+    android:scaleType="centerCrop"/>
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="19sp"
-        android:paddingRight="19sp"
+        android:paddingLeft="19dp"
+        android:paddingRight="19dp"
         android:text="@string/step_into_the_world_of_films_with_movievault"
         android:textColor="@color/textColor"
         android:textSize="38sp"
@@ -37,9 +38,9 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="19sp"
-        android:paddingRight="19sp"
-        android:paddingTop="10sp"
+        android:paddingLeft="19dp"
+        android:paddingRight="19dp"
+        android:paddingTop="10dp"
         android:text="@string/String2"
         android:textColor="@color/textColor"
         android:textSize="20sp"
@@ -50,9 +51,11 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
-        android:layout_width="420dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/ic_custom_button"
         android:fontFamily="@font/plus_jakarta_sans_extrabold"
         android:text="@string/get_started"

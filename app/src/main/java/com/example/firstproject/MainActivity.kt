@@ -7,8 +7,8 @@ import com.example.firstproject.databinding.ActivityOnboardingBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_main)
-}
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
 
 }

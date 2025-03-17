@@ -7,6 +7,7 @@
     android:background="@color/background_App">
 
     <TextView
+        android:id="@+id/textSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -23,25 +24,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="32.5dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/ic_custom_search"
-        android:drawableStart="@drawable/ic_lupa"
+        android:drawableStart="@drawable/ic_llupa"
         android:drawablePadding="8dp"
         android:fontFamily="@font/plus_jakarta_sans"
         android:hint="@string/editText"
         android:inputType="text"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         android:textColorHint="@color/search_string"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/textSearch"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

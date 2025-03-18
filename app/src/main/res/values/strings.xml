@@ -3,4 +3,6 @@
     <string name="step_into_the_world_of_films_with_movievault">Step into the world of films with MovieVault</string>
     <string name="String2">Your personal cinema companion awaits. Discover, track, and explore movies that matter to you.</string>
     <string name="get_started">Get Started</string>
+    <string name="Search">Search</string>
+    <string name="editText">Find a movie, TV show, or person</string>
 </resources>

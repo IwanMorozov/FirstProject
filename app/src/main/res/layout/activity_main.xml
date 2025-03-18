@@ -1,61 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FCFAF7"
-    android:id="@+id/main">
-
-
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="454dp"
-        android:contentDescription="@string/app_name"
-        app:srcCompat="@drawable/ic_one" />
+    android:background="@color/background_App">
 
     <TextView
+        android:id="@+id/textSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="19sp"
-        android:paddingRight="19sp"
-        android:text="@string/step_into_the_world_of_films_with_movievault"
-        android:textColor="#1C120D"
-        android:textSize="32sp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="28.5dp"
+        android:layout_marginEnd="64dp"
         android:fontFamily="@font/plus_jakarta_sans_bold"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="19sp"
-        android:paddingRight="19sp"
-        android:paddingTop="10sp"
-        android:text="@string/String2"
-        android:textColor="#1C120D"
+        android:gravity="center"
+        android:text="@string/Search"
+        android:textColor="@color/textColor"
         android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32.5dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_custom_search"
+        android:drawableStart="@drawable/ic_llupa"
+        android:drawablePadding="8dp"
         android:fontFamily="@font/plus_jakarta_sans"
-        android:textStyle="bold" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        />
-
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:backgroundTint="@color/FigmaProg1"
-        android:text="@string/get_started"
-        android:textColor="#1C120D"
-        android:textSize="18sp"
-        android:fontFamily="@font/plus_jakarta_sans_bold"
-        tools:ignore="VisualLintButtonSize" />
+        android:hint="@string/editText"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColorHint="@color/search_string"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textSearch"/>
 
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

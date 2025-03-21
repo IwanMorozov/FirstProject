@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_App">
+
+    <TextView
+        android:id="@+id/godFather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="28.5dp"
+        android:layout_marginEnd="64dp"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:gravity="center"
+        android:text="@string/Godfather"
+        android:textColor="@color/textColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:contentDescription="@string/Back"
+        android:focusable="true"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/imageGodFather"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/imageGodFather"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton"
+        app:srcCompat="@drawable/ic_det1"
+        />
+
+    <TextView
+        android:id="@+id/DurationRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Duration"
+        android:textColor="@color/textColor"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageGodFather"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:chipSpacingHorizontal="12dp"
+        app:singleSelection="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DurationRating">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Drama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Drama"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:textColor="@color/textColor"
+            app:chipCornerRadius="12dp"
+            app:chipBackgroundColor="@color/genreColor"
+            app:chipStrokeColor="@android:color/transparent"
+            app:strokeColor="@android:color/transparent"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Crime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Crime"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:textColor="@color/textColor"
+            app:chipCornerRadius="12dp"
+            app:chipBackgroundColor="@color/genreColor"
+            app:chipStrokeColor="@android:color/transparent"
+            app:strokeColor="@android:color/transparent"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Classic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Classic"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:textColor="@color/textColor"
+            app:chipCornerRadius="12dp"
+            app:chipBackgroundColor="@color/genreColor"
+            app:chipStrokeColor="@android:color/transparent"
+            app:strokeColor="@android:color/transparent"/>
+
+</com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/Synopsys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:text="@string/Synopsis"
+        android:textColor="@color/textColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipGroup" />
+
+    <TextView
+        android:id="@+id/SynopsysGodfather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="12dp"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:text="@string/SynopsisOfGodfather"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Synopsys"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/favoritesButton"
+        android:layout_width="216dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/ic_custom_button"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:text="@string/Favorites"
+        android:textAllCaps="false"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/shareButton"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_share_button"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:text="@string/Share"
+        android:textAllCaps="false"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/favoritesButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

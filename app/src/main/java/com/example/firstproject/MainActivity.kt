@@ -1,7 +1,7 @@
 package com.example.firstproject
-
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatEditText
 
@@ -9,8 +9,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d("Lifecycle","onCreate вызван")
+
+        val godFather = findViewById<ImageView>(R.id.imageGodFather)
+
+        godFather.setOnClickListener {
+            val intent = Intent(this, MovieDetailActivity::class.java)
+            startActivity(intent)
+        }
     }
+
+
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         val editText = findViewById<AppCompatEditText>(R.id.editText)
@@ -22,30 +30,5 @@ class MainActivity : AppCompatActivity() {
         val editText = findViewById<AppCompatEditText>(R.id.editText)
         val savedText = savedInstanceState.getString("USER_INPUT")
         editText.setText(savedText)
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Log.d("Lifecycle","onStart вызван")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d("Lifecycle","onResume вызван")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d("Lifecycle","onPause вызван")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d("Lifecycle","onStop вызван")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("Lifecycle","onDestroy вызван")
     }
 }

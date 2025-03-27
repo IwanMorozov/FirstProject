@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">First Project</string>
     <string name="first_onboarding">first onBoarding</string>
     <string name="step_into_the_world_of_films_with_movievault">Step into the world of films with MovieVault</string>
     <string name="String2">Your personal cinema companion awaits. Discover, track, and explore movies that matter to you.</string>

@@ -21,7 +21,7 @@
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
-        android:layout_height="102dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/plus_jakarta_sans_bold"
         android:paddingLeft="16dp"
         android:paddingTop="20dp"

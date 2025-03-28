@@ -13,8 +13,7 @@ class MovieDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_detail)
 
-        val intent = intent
-        val movieId = intent.getStringExtra("movie_id") ?: "Такого фильма нет"
+        val movieId = intent.getStringExtra("movie_id") ?: throw IllegalStateException()
         val movieTextView = findViewById<TextView>(R.id.godFather)
         movieTextView.text = movieId
 

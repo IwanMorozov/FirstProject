@@ -7,4 +7,6 @@
     <color name="background_App">#FCFAF7</color>
     <color name="search_back">#F5EDE8</color>
     <color name="search_string">#9C6B4A</color>
+    <color name="genreColor">#F5EDE8</color>
+    <color name="shareButton">#F5EDE8</color>
 </resources>

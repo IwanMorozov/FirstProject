@@ -9,11 +9,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 
 class MovieDetailActivity : AppCompatActivity() {
+
+    companion object{
+        const val ARG_MOVIE_ID = "movie_id"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_detail)
 
-        val movieId = intent.getStringExtra("movie_id") ?: throw IllegalStateException()
+
+        val movieId = intent.getStringExtra(ARG_MOVIE_ID) ?: throw IllegalStateException()
         val movieTextView = findViewById<TextView>(R.id.godFather)
         movieTextView.text = movieId
 

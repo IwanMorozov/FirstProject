@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         godFather.setOnClickListener {
             val intent = Intent(this, MovieDetailActivity::class.java)
-            intent.putExtra("movie_id", "The Godfather")
+            intent.putExtra(MovieDetailActivity.ARG_MOVIE_ID, "The Godfather")
             startActivity(intent)
         }
     }

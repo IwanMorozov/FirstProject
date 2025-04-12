@@ -1,8 +1,22 @@
 <resources>
-    <string name="app_name">FirstProject</string>
+    <string name="app_name">First Project</string>
+    <string name="first_onboarding">first onBoarding</string>
     <string name="step_into_the_world_of_films_with_movievault">Step into the world of films with MovieVault</string>
     <string name="String2">Your personal cinema companion awaits. Discover, track, and explore movies that matter to you.</string>
     <string name="get_started">Get Started</string>
     <string name="Search">Search</string>
     <string name="editText">Find a movie, TV show, or person</string>
+    <string name="Godfather">The Godfather</string>
+    <string name="Back">Назад</string>
+    <string name="imageGodFather">Крестный Отец 1</string>
+    <string name="Duration">Duration: 2 HR 55 MIN\nRating: 9.2 (1234 votes)</string>
+    <string name="Rating">Rating: 9.2 (1234 votes)</string>
+    <string name="Drama">Drama</string>
+    <string name="Crime">Crime</string>
+    <string name="Classic">Classic</string>
+    <string name="Synopsis">Synopsis</string>
+    <string name="SynopsisOfGodfather">The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.
+    </string>
+    <string name="Favorites">Add to Favorites</string>
+    <string name="Share">Share</string>
 </resources>

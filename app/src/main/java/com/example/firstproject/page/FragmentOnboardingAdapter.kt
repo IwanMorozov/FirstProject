@@ -1,14 +1,12 @@
-package com.example.firstproject
+package com.example.firstproject.page
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.firstproject.fragment.FirstOnboardingFragment
-import com.example.firstproject.fragment.OnBoardingActivityFragment
 import com.example.firstproject.fragment.SecondOnboardingFragment
 import com.example.firstproject.fragment.ThirdOnboardingFragment
-import java.lang.IllegalArgumentException
 
-class FragmentOnboardingAdapter(fragmentActivity: OnBoardingActivityFragment) :
+class FragmentOnboardingAdapter(fragmentActivity: OnBoardingFragment) :
     FragmentStateAdapter(fragmentActivity) {
 
     override fun getItemCount(): Int = 3
@@ -16,9 +14,9 @@ class FragmentOnboardingAdapter(fragmentActivity: OnBoardingActivityFragment) :
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> FirstOnboardingFragment.newInstance()
-            1 -> SecondOnboardingFragment.newInstance()
-            2 -> ThirdOnboardingFragment.newInstance()
+            0 -> FirstOnboardingFragment.Companion.newInstance()
+            1 -> SecondOnboardingFragment.Companion.newInstance()
+            2 -> ThirdOnboardingFragment.Companion.newInstance()
             else -> throw IllegalArgumentException("Invalid position: $position")
         }
     }

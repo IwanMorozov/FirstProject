@@ -1,4 +1,4 @@
-package com.example.firstproject.fragment
+package com.example.firstproject.page
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,21 +7,22 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.example.firstproject.FragmentOnboardingAdapter
+import com.example.firstproject.page.FragmentOnboardingAdapter
 import com.example.firstproject.R
-//import com.example.firstproject.databinding.ActivityOnboardingBinding
+import com.example.firstproject.databinding.ActivityOnboardingBinding
 import me.relex.circleindicator.CircleIndicator3
 
+class OnBoardingFragment : Fragment() {
 
-class OnBoardingActivityFragment : Fragment() {
+    private var binding: ActivityOnboardingBinding? = null
 
-//    private lateinit var binding: ActivityOnboardingBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.activity_onboarding, container, false)
+        binding = ActivityOnboardingBinding.inflate(inflater, container, false)
+        return binding!!.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -35,15 +36,16 @@ class OnBoardingActivityFragment : Fragment() {
 
         view.findViewById<Button>(R.id.button).setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,HeadFragment.newInstance())
+                .replace(R.id.fragment_container, MainFragment.Companion.newInstance())
+                .addToBackStack(MainFragment::class.java.name)
                 .commit()
         }
     }
 
 
     companion object {
-        fun newInstance(): OnBoardingActivityFragment {
-            return OnBoardingActivityFragment()
+        fun newInstance(): OnBoardingFragment {
+            return OnBoardingFragment()
         }
     }
 }

@@ -14,9 +14,9 @@ class FragmentOnboardingAdapter(fragmentActivity: OnBoardingFragment) :
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> FirstOnboardingFragment.Companion.newInstance()
-            1 -> SecondOnboardingFragment.Companion.newInstance()
-            2 -> ThirdOnboardingFragment.Companion.newInstance()
+            0 -> FirstOnboardingFragment.newInstance()
+            1 -> SecondOnboardingFragment.newInstance()
+            2 -> ThirdOnboardingFragment.newInstance()
             else -> throw IllegalArgumentException("Invalid position: $position")
         }
     }

@@ -18,7 +18,7 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentMainBinding.inflate(inflater, container, false)
         return binding!!.root
     }
@@ -26,22 +26,20 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding?.imageGodFather?.setOnClickListener {
-            val movieId = "The Godfather"
+        binding!!.imageGodFather.setOnClickListener {
 
-            val bundle = Bundle().apply {
-                putString(MovieDetailFragment.ARG_MOVIE_ID, movieId)
-            }
-
-            val movieDetailFragment = MovieDetailFragment().apply {
-                arguments = bundle
-            }
+            val movieDetailFragment = MovieDetailFragment.newInstance("The Godfather")
 
             parentFragmentManager.commit {
                 replace(R.id.fragment_container, movieDetailFragment)
                 addToBackStack(null)
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
     }
 
     companion object {

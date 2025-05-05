@@ -5,23 +5,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
-import com.example.firstproject.R
 import com.example.firstproject.databinding.ActivityMovieDetailBinding
 
 class MovieDetailFragment : Fragment() {
 
     private var binding: ActivityMovieDetailBinding? = null
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = ActivityMovieDetailBinding.inflate(inflater, container, false)
         return binding!!.root
     }
@@ -33,16 +29,14 @@ class MovieDetailFragment : Fragment() {
         val movieId = arguments?.getString(ARG_MOVIE_ID)
             ?: throw IllegalStateException("Что-то не так")
 
-        val movieTextView = view.findViewById<TextView>(R.id.godFather)
-        movieTextView.text = movieId
+        binding!!.godFather.text = movieId
 
-        binding?.backButton?.setOnClickListener {
+        binding!!.backButton.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
 
-        val shareButton = view.findViewById<AppCompatButton>(R.id.shareButton)
-        shareButton.setOnClickListener {
+        binding?.shareButton?.setOnClickListener {
             val shareText = "Привет! Посмотри этот фильм: $movieId."
             share(shareText)
         }
@@ -65,16 +59,20 @@ class MovieDetailFragment : Fragment() {
 
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
+    }
+
     companion object {
-        const val ARG_MOVIE_ID = "movie_id"
+        private const val ARG_MOVIE_ID = "movie_id"
 
         fun newInstance(movieId: String): MovieDetailFragment {
-            val fragment = MovieDetailFragment()
-            val args = Bundle().apply {
-                putString(ARG_MOVIE_ID, movieId)
+            return MovieDetailFragment().apply {
+                arguments = Bundle().apply {
+                    putString(ARG_MOVIE_ID,movieId)
+                }
             }
-            fragment.arguments = args
-            return fragment
         }
     }
 

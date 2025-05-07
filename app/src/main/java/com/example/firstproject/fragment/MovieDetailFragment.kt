@@ -29,9 +29,9 @@ class MovieDetailFragment : Fragment() {
         val movieId = arguments?.getString(ARG_MOVIE_ID)
             ?: throw IllegalStateException("Что-то не так")
 
-        binding!!.godFather.text = movieId
+        binding?.godFather?.text = movieId
 
-        binding!!.backButton.setOnClickListener {
+        binding?.backButton?.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
@@ -70,7 +70,7 @@ class MovieDetailFragment : Fragment() {
         fun newInstance(movieId: String): MovieDetailFragment {
             return MovieDetailFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_MOVIE_ID,movieId)
+                    putString(ARG_MOVIE_ID, movieId)
                 }
             }
         }

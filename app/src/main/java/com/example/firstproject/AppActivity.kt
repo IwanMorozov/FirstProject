@@ -7,12 +7,12 @@ import com.example.firstproject.page.OnBoardingFragment
 
 class AppActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMainBinding
+    private var binding : ActivityMainBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(binding!!.root)
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
@@ -22,6 +22,7 @@ class AppActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
+        binding = null
         super.onDestroy()
     }
 }

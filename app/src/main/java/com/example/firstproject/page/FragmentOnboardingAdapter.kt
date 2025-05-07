@@ -6,11 +6,10 @@ import com.example.firstproject.fragment.FirstOnboardingFragment
 import com.example.firstproject.fragment.SecondOnboardingFragment
 import com.example.firstproject.fragment.ThirdOnboardingFragment
 
-class FragmentOnboardingAdapter(fragmentActivity: OnBoardingFragment) :
-    FragmentStateAdapter(fragmentActivity) {
+class FragmentOnboardingAdapter
+    (fragment: Fragment) : FragmentStateAdapter(fragment) {
 
     override fun getItemCount(): Int = 3
-
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {

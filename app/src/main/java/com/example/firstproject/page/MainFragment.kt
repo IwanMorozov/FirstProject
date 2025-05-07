@@ -26,20 +26,24 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding!!.imageGodFather.setOnClickListener {
+        binding?.imageGodFather?.setOnClickListener {
 
             val movieDetailFragment = MovieDetailFragment.newInstance("The Godfather")
 
             parentFragmentManager.commit {
-                replace(R.id.fragment_container, movieDetailFragment)
+                replace(
+                    R.id.fragment_container,
+                    movieDetailFragment,
+                    MovieDetailFragment::class.java.name
+                )
                 addToBackStack(null)
             }
         }
     }
 
     override fun onDestroyView() {
-        super.onDestroyView()
         binding = null
+        super.onDestroyView()
     }
 
     companion object {

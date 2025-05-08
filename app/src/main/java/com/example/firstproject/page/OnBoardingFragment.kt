@@ -31,7 +31,7 @@ class OnBoardingFragment : Fragment() {
         binding?.button?.setOnClickListener {
             parentFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, MainFragment.newInstance())
-            .addToBackStack(MainFragment::class.java.name)
+            .addToBackStack(OnBoardingFragment::class.java.name)
             .commit()
         }
     }

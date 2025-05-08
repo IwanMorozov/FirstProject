@@ -55,5 +55,6 @@ dependencies {
     implementation (libs.material)
     implementation (libs.circleindicator)
     implementation (libs.circleindicator.v216)
+    implementation (libs.androidx.fragment.ktx)
 
 }

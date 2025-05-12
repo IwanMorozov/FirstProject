@@ -5,56 +5,13 @@
     android:layout_height="match_parent"
     android:background="@color/background_App">
 
-    <TextView
-        android:id="@+id/textSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="28.5dp"
-        android:layout_marginEnd="64dp"
-        android:fontFamily="@font/plus_jakarta_sans_bold"
-        android:gravity="center"
-        android:text="@string/Search"
-        android:textColor="@color/textColor"
-        android:textSize="18sp"
-        android:textStyle="bold"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32.5dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/ic_custom_search"
-        android:drawableStart="@drawable/ic_llupa"
-        android:drawablePadding="8dp"
-        android:fontFamily="@font/plus_jakarta_sans"
-        android:hint="@string/editText"
-        android:inputType="text"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:textColorHint="@color/search_string"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textSearch" />
-
-    <ImageView
-        android:id="@+id/imageGodFather"
-        android:layout_width="173dp"
-        android:layout_height="230.67dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:clickable="true"
-        android:contentDescription="@string/imageGodFather"
-        android:focusable="true"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:srcCompat="@drawable/ic_godfather" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

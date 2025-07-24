@@ -11,15 +11,16 @@ import com.example.firstproject.databinding.ActivityMovieDetailBinding
 
 class MovieDetailFragment : Fragment() {
 
-    private var binding: ActivityMovieDetailBinding? = null
+    private var _binding: ActivityMovieDetailBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = ActivityMovieDetailBinding.inflate(inflater, container, false)
-        return binding!!.root
+        _binding = ActivityMovieDetailBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -29,19 +30,19 @@ class MovieDetailFragment : Fragment() {
         val movieId = arguments?.getString(ARG_MOVIE_ID)
             ?: throw IllegalStateException("Что-то не так")
 
-        binding?.godFather?.text = movieId
+        binding.godFather.text = movieId
 
-        binding?.backButton?.setOnClickListener {
+        binding.backButton.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
 
-        binding?.shareButton?.setOnClickListener {
+        binding.shareButton.setOnClickListener {
             val shareText = "Привет! Посмотри этот фильм: $movieId."
             share(shareText)
         }
 
-        binding?.favoritesButton?.setOnClickListener {
+        binding.favoritesButton.setOnClickListener {
             Toast.makeText(requireActivity(), "Функционал еще в разработке", Toast.LENGTH_SHORT)
                 .show()
         }
@@ -61,19 +62,11 @@ class MovieDetailFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        binding = null
+        _binding = null
     }
 
     companion object {
         private const val ARG_MOVIE_ID = "movie_id"
-
-        fun newInstance(movieId: String): MovieDetailFragment {
-            return MovieDetailFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_MOVIE_ID, movieId)
-                }
-            }
-        }
     }
 
 }

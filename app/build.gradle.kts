@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.navigation.safeargs.kotlin)
 }
 
 android {
@@ -22,7 +23,6 @@ android {
         viewBinding = true
     }
 
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -32,17 +32,18 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
     }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -51,10 +52,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation (libs.androidx.viewpager2)
-    implementation (libs.material)
-    implementation (libs.circleindicator)
-    implementation (libs.circleindicator.v216)
-    implementation (libs.androidx.fragment.ktx)
-
+    implementation(libs.androidx.viewpager2)
+    implementation(libs.material)
+    implementation(libs.circleindicator)
+    implementation(libs.circleindicator.v216)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.recyclerview)
 }

@@ -1,13 +1,10 @@
 package com.example.firstproject
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.firstproject.databinding.ActivityMainBinding
-import com.example.firstproject.page.OnBoardingFragment
 
 class AppActivity : AppCompatActivity() {
 

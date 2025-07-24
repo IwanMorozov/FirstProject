@@ -7,12 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
+import com.example.firstproject.R
 import com.example.firstproject.databinding.ActivityMovieDetailBinding
 
-class MovieDetailFragment : Fragment() {
+class MovieDetailFragment : Fragment(R.layout.activity_movie_detail) {
 
     private var _binding: ActivityMovieDetailBinding? = null
     private val binding get() = _binding!!
+    private val args: MovieDetailFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,10 +30,10 @@ class MovieDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        val movieId = arguments?.getString(ARG_MOVIE_ID)
-            ?: throw IllegalStateException("Что-то не так")
+        val movieId = args.movieId
 
         binding.godFather.text = movieId
+
 
         binding.backButton.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
@@ -64,9 +67,4 @@ class MovieDetailFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-    companion object {
-        private const val ARG_MOVIE_ID = "movie_id"
-    }
-
 }

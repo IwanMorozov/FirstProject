@@ -16,6 +16,7 @@ navigation = "2.9.0"
 navigationFragmentKtx = "2.9.0"
 navigationSafeArgsGradlePlugin = "2.9.0"
 navigationSafeArgsGradlePluginVersion = "2.4.2-alpha09"
+recyclerview = "1.4.0"
 viewpager2 = "1.1.0"
 
 [libraries]
@@ -26,6 +27,7 @@ androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fr
 androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationFragmentKtx" }
 androidx-navigation-safe-args-gradle-plugin-v235 = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationSafeArgsGradlePlugin" }
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationFragmentKtx" }
+androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
 androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
 circleindicator = { module = "me.relex:circleindicator", version.ref = "circleindicator" }
 circleindicator-v216 = { module = "me.relex:circleindicator", version.ref = "circleindicatorVersion" }
